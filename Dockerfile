@@ -10,8 +10,6 @@ RUN apt-get update \
 		libpng12-dev \
 		libfreetype6-dev \
 		libxml2-dev \
-		mysql-client \
-		mysql-server \
 		wget \
 		unzip \
     && rm -rf /var/lib/apt/lists/* \
