@@ -30,3 +30,7 @@ ENV APP_MAGE_MODE default
 COPY conf/php.ini /usr/local/etc/php/
 COPY conf/php-fpm.conf /usr/local/etc/
 COPY bin/* /usr/local/bin/ 
+
+WORKDIR /src
+
+CMD ["/usr/local/bin/start"]
