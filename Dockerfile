@@ -31,4 +31,4 @@ COPY bin/* /usr/local/bin/
 WORKDIR /src
 
 RUN chmod +x /usr/local/bin/start
-CMD ["/usr/local/bin/start"]
+ENTRYPOINT ["/usr/local/bin/start"]
