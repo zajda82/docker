@@ -27,8 +27,8 @@ ENV APP_MAGE_MODE default
 COPY conf/php.ini /usr/local/etc/php/
 COPY conf/php-fpm.conf /usr/local/etc/
 COPY bin/* /usr/local/bin/ 
+RUN chmod +x /usr/local/bin/start.sh
 
 WORKDIR /src
 
-RUN chmod +x /usr/local/bin/start
-ENTRYPOINT ["/usr/local/bin/start"]
+ENTRYPOINT ["/usr/local/bin/start.sh"]
