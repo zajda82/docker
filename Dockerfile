@@ -14,7 +14,7 @@ RUN apt-get update \
 		unzip \
     && rm -rf /var/lib/apt/lists/* \
     && docker-php-ext-configure gd --with-freetype-dir=/usr/include/ --with-jpeg-dir=/usr/include/ \
-    && docker-php-ext-install iconv mcrypt pdo mysql pdo_mysql mbstring soap gd
+    && docker-php-ext-install iconv mcrypt pdo mysqli pdo_mysql mbstring soap gd
 
 ENV PHP_MEMORY_LIMIT 2G
 ENV PHP_PORT 9000
