@@ -1,7 +1,6 @@
 FROM php:7.0.2-fpm
 MAINTAINER Peter Zajic
 
-
 RUN apt-get update \
 	&& apt-get install -y \
         cron \
@@ -31,4 +30,5 @@ COPY bin/* /usr/local/bin/
 
 WORKDIR /src
 
+RUN chmod +x /usr/local/bin/start
 CMD ["/usr/local/bin/start"]
